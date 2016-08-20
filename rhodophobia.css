@@ -1,0 +1,175 @@
+/*
+Rhodophobia Firefox Skin, made by miscoined.
+
+Inspired by neiio's Void Windows 10 skin.
+
+#fc615b accent
+#323232 bg
+#232323 bg accent
+#8a8a8a text
+#a7a7a7 text accent
+*/
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* CLEAR EXISTING THINGS */
+#nav-bar, #PanelUI-menu-button > .toolbarbutton-badge-stack { border: none !important;}
+#PanelUI-button, #urlbar { border: none; }
+
+#urlbar,
+#navigator-toolbox > toolbar:not(:-moz-lwtheme):not(#toolbar-menubar):not(#TabsToolbar),
+#PanelUI-menu-button:hover > .toolbarbutton-badge-stack {
+  background: none !important;
+}
+
+/* WE DON'T NEED BORDERS WE DON'T NEED BACKGROUNDS this was ridiculously hard to fix jfc */
+#PanelUI-menu-button:hover:active > .toolbarbutton-badge-stack,
+#PanelUI-menu-button:hover > .toolbarbutton-badge-stack,
+#PanelUI-menu-button > .toolbarbutton-badge-stack,
+#nav-bar-customization-target > .chromeclass-toolbar-additional:hover:active > *,
+#nav-bar-customization-target > .chromeclass-toolbar-additional:hover > *,
+#nav-bar-customization-target > .chromeclass-toolbar-additional > * {
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  transition: none !important;
+}
+
+#back-button, #forward-button
+#nav-bar-customization-target > .chromeclass-toolbar-additional *,
+#nav-bar-customization-target > .chromeclass-toolbar-additional,
+#PanelUI-menu-button > * {
+  padding: 0 !important;
+}
+#nav-bar #PanelUI-menu-button,
+#urlbar > hbox > dropmarker {
+  padding: 0;
+}
+
+#identity-box,
+#back-button > .toolbarbutton-icon,
+#forward-button > .toolbarbutton-icon,
+#back-button menupopup,
+#forward-button menupopup,
+#urlbar-reload-button >.toolbarbutton-icon,
+#urlbar-go-button > .toolbarbutton-icon,
+#urlbar > hbox > dropmarker > image,
+#new-tab-button > .toolbarbutton-icon,
+#new-tab-button > .toolbarbutton-text {
+  display: none;
+}
+
+/* Replace icons */
+#back-button:before { content: "«"; }
+#forward-button:before { content: "»"; }
+#urlbar > hbox > dropmarker:before { content: "⇣"; } /* Autocomplete arrow */
+#new-tab-button:before { content: "+"; }
+/* Heartzzzz */
+#urlbar-reload-button:before,
+#urlbar-go-button:before {
+  content: "»";
+}
+
+/* Pretties */
+#navigator-toolbox { background: #323232; }
+
+/* Uniform element height plox */
+#nav-bar-customization-target .chromeclass-toolbar-additional,
+#urlbar {
+  max-height: 25px;
+  height: 25px;
+}
+
+#nav-bar #PanelUI-menu-button {
+  margin-bottom: 5px;
+  width: 31px;
+}
+
+#urlbar > .chromeclass-toolbar-additional {
+  min-height: 25px;
+  margin-left: 0;
+}
+
+#nav-bar-customization-target > .chromeclass-toolbar-additional {
+  width: 30px;
+  margin: 0 1px;
+}
+
+#nav-bar-customization-target .chromeclass-toolbar-additional, #urlbar { color: #8a8a8a; }
+#nav-bar-customization-target > .chromeclass-toolbar-additional:hover { background: rgba(0,0,0,0.5); }
+#nav-bar-customization-target .chromeclass-toolbar-additional:hover { color: #fc615b; }
+
+#urlbar { font: 16px "rainyhearts", sans-serif; }
+#back-button:before, #forward-button:before { font: 12pt "7:12 serif", serif; }
+
+/*
+Here is a booply eye it was conjured through haaacksss
+Replace this with
+#PanelUI-menu-button > .toolbarbutton-badge-stack:before { content: "menu"; }
+to remove the image and instead get text
+*/
+#PanelUI-menu-button .toolbarbutton-icon {
+  background: url(data:image/gif;base64,R0lGODlhFQARAKIEAP8NW/9klv///zAwMP///wAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFCgAEACwAAAAAFQARAAADS0i6PPzwudjmGlhasumFXehhZJk1CikIQ+AOK5ly2MoGAB7A8Qn/GBwgp/qlfjFXbhdjWXi21ssW01BV0c7FZBpJvmAPaqsJaUHiBAAh+QQFCgAEACwAAAAAAQABAAADAkgJACH5BAUKAAQALAIACAACAAIAAAMDSAGUACH5BAUKAAQALAIACAADAAIAAAMESEDBCQAh+QQFCgAEACwCAAgABAACAAADBUihQ0AJACH5BAUKAAQALAMACAAEAAIAAAMFOARBTQkAIfkEBQoABAAsBAAIAAMAAgAAAwRIAUOUACH5BAUKAAQALAUACAACAAEAAAMCOJEAIfkEBQoABAAsBgAIAAEAAQAAAwI4CQAh+QQFCgAEACwAAAAAAQABAAADAkgJACH5BAUKAAQALAAAAAABAAEAAAMCSAkAIfkEBQoABAAsAAAAAAEAAQAAAwJICQAh+QQFCgAEACwAAAAAAQABAAADAkgJACH5BAUKAAQALA4ACAABAAEAAAMCGAkAIfkEBQoABAAsDgAIAAIAAQAAAwIIkQAh+QQFCgAEACwOAAgAAwACAAADBBhAHAkAIfkEBQoABAAsDgAIAAQAAgAAAwU4QUtACQAh+QQFCgAEACwPAAgABAACAAADBTgEROEJACH5BAUKAAQALBAACAADAAIAAAMESEFDkAAh+QQFCgAEACwRAAgAAgACAAADAzhEkQAh+QQFZAAEACwSAAkAAQABAAADAjgJADs=) no-repeat;
+  width: 21px;
+  min-height: 17px;
+  padding-left: 21px;
+}
+#PanelUI-menu-button:hover .toolbarbutton-icon { background-image: url(data:image/gif;base64,R0lGODlhFQARAKIEAP8NW/9klv///zAwMP///wAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQJAAAEACwAAAAAFQARAAADS0i6PPzwudjmGlhasumFXehhZJk1CikIQ+AOK5ly2MoGAB7A8Qn/GBwgp/qlfjFXbhdjWXi21ssW01BV0c7FZBpJvmAPaqsJaUHiBAAh+QQJAAAEACwAAAAAFQARAAADRki6PPzwudjmGlhasun1INWNzYWd6PldgjAEABwMbcfRJwzEpyu5tYBsVvOxWkEhDWk0MXvITCRF9ZBKkhBWITWNbBDwIgEAIfkECQAABAAsAAAAABUAEQAAA0FIujz88LnY5hpYWrLp9WAoKlvZnBqmZtGkBkAcqGQ1CMIQwPudsyScUNcT4joYo0rZuayezQ9KOhWVkEBSVAJKAAAh+QQJAAAEACwAAAAAFQARAAADOEi6PPzwudjmGlhasun1YCgq3chJTQpZWOt+lzsEAUDLGybswnzzvQ5umEEZVSZQyZMTFmOi5SIBACH5BAkAAAQALAAAAAAVABEAAAMySLo8/PC52OYaWFqy6fVgKCrdyJnetK1khb1wvAo0PQT4UNua7EOlICpUSlV6GlFxkQAAIfkEBQAABAAsAAAAABUAEQAAAy1Iujz88LnY5hpYWrLp9WAoKt3Imd5UfueFbfBbvXQtz7YNlTwarpSYppP5gRIAIfkEBQAABAAsAAAAAAEAAQAAAwJICQAh+QQJAAAEACwDAAgADwADAAADDki6NPxtyDiVuJeETfBNACH5BAkAAAQALAAAAAAVABEAAAMlSLrc/jDKSau9GA+2V49DKIrgGATAOX6e4ArDGQwvnN14ru9UAgAh+QQJAAAEACwAAAAAFQARAAADQUi6PPzwudjmGlhasun1YCgqW9mcGqZm0aQGQByoZDUIwhDA+52zJJxQ1xPiOhijStm5rJ7ND0o6FZWQQFJUAkoAACH5BAkAAAQALAAAAAAVABEAAANGSLo8/PC52OYaWFqy6fUg1Y3NhZ3o+V2CMAQAHAxtx9EnDMSnK7m1gGxW87FaQSENaTQxe8hMJEX1kEqSEFYhNY1sEPAiAQAh+QQFAAAEACwAAAAAFQARAAADS0i6PPzwudjmGlhasumFXehhZJk1CikIQ+AOK5ly2MoGAB7A8Qn/GBwgp/qlfjFXbhdjWXi21ssW01BV0c7FZBpJvmAPaqsJaUHiBAAh+QQFAAAEACwAAAAAAQABAAADAkgJACH5BAUAAAQALAAAAAABAAEAAAMCSAkAIfkEBQAABAAsAAAAAAEAAQAAAwJICQAh+QQFAAAEACwAAAAAAQABAAADAkgJACH5BAUAAAQALAAAAAABAAEAAAMCSAkAIfkEBQAABAAsAAAAAAEAAQAAAwJICQAh+QQFAAAEACwAAAAAAQABAAADAkgJACH5BAUAAAQALAAAAAABAAEAAAMCSAkAIfkEBQAABAAsAAAAAAEAAQAAAwJICQAh+QQFAAAEACwAAAAAAQABAAADAkgJACH5BAUAAAQALAAAAAABAAEAAAMCSAkAIfkEBQAABAAsAAAAAAEAAQAAAwJICQAh+QQFAAAEACwAAAAAAQABAAADAkgJACH5BAUAAAQALAAAAAABAAEAAAMCSAkAIfkEBQAABAAsAAAAAAEAAQAAAwJICQAh+QQFAAAEACwAAAAAAQABAAADAkgJACH5BAUAAAQALAAAAAABAAEAAAMCSAkAIfkEBQAABAAsAAAAAAEAAQAAAwJICQAh+QQFAAAEACwAAAAAAQABAAADAkgJACH5BAUAAAQALAAAAAABAAEAAAMCSAkAIfkEBQAABAAsAAAAAAEAAQAAAwJICQAh+QQFAAAEACwAAAAAAQABAAADAkgJACH5BAUAAAQALAAAAAABAAEAAAMCSAkAIfkEBQAABAAsAAAAAAEAAQAAAwJICQA7); }
+#PanelUI-menu-button:active .toolbarbutton-icon { background-image: url(data:image/gif;base64,R0lGODlhFQAUAKIEAP8NW/9klv///zAwMP///wAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQJCgAEACwAAAAAFQAUAAADUEi6PPzwudjmGlhasumFXehhZJk1CikIQ+AOK5ly2MoGAB7A8Qn/GBwgp/qlfjFXbhdjWXi21ssW01BV0c7FZBpJvmAPaqsJaUHitHrNXicAACH5BAkKAAQALAAAAAAVABQAAANSSLo8/PC52OYaWFqy6YVd6GFkmTUKKQhD4A4rmXLYygYAHsDxCf8YHCCn+qWAQd2uaOHZWi9bTCJl1aSdYxWbnZlKHFCkuzl5jmdaNx1mu9/sBAAh+QQJCgAEACwAAAAAFQAUAAADVUi6PPzwudjmGlhasumFXehhZJk1CikIQ+AOK5ly2MoGAB7A8Qn/GBwgp/qlShxXbkeTpVis4KtmbNh6PFvneO2eQE2TY7vlRDZfD03dZFPK7rgckgAAIfkECQoABAAsAAAAABUAFAAAA1dIujz88LnY5hpYWrLphV3oYWSZNQoprCp7Oi0bzMPqTnWOBQAfqLkULMUD9HAcXIkz6/2SpItAN5j9MNOpxHbjakE1r+0EgpqGkkgnVfG03XB3NF72JAAAIfkECQoABAAsAAAAABUAFAAAA1hIujz88LnY5hpYWrLphV3oYWSZNQoprCxLphzWCmr7cjRNBnyZTxlgADAMAGMwTmoIIB6VMYeURzQqpZcfhmeUDWiSWc0Vkc1cnY+pBEWByhVPXH6Twz0JACH5BAUKAAQALAAAAAAVABQAAANXSLo8/PC52OYaWFqy6YVd6GFkmTUKKawsS6Yc1gpq+3I0TQZ8mU8ZYAAwDABjME5qCCAeldALj2iUpILLHuyGG+hMMm/IO5udQODSyIpie9pXzfidpCQAACH5BAUKAAQALAAAAAABAAEAAAMCSAkAIfkECQAABAAsAQAMABMABwAAAwtIutz+MMpJq701AQAh+QQJAAAEACwAAAAAFQAUAAADNUi63P4wykmrvTjrzbsaAxFC4bgMAgoOQbumaYMKdArWtMncOA6SopWw5NCdHrofRRlZeSAJACH5BAkAAAQALAAAAAAVABQAAANXSLo8/PC52OYaWFqy6YVd6GFkmTUKKawqezotG8zD6k51jgUAH6i5FCzFA/RwHFyJM+v9kqSLQDeY/TDTqcR242pBNa/tBIKahpJIJ1XxtN1wdzRe9iQAACH5BAUAAAQALAAAAAAVABQAAANVSLo8/PC52OYaWFqy6YVd6GFkmTUKKQhD4A4rmXLYygYAHsDxCf8YHCCn+qVKHFduR5OlWKzgq2Zs2Ho8W+d47Z5ATZNju+VENl8PTd1kU8ruuBySAAAh+QQJAAAEACwDAAkADwAJAAADEihEs76NqKmemC/rzbv/YChuCQAh+QQFAAAEACwAAAAAFQAUAAADM0i63P4wykmrvTjrrcQQXhAA4ucJDqgOYmCqzvB6skpDcq7L0dD4DCAn9uMFK8KhcslIAAAh+QQFAAAEACwAAAAAAQABAAADAkgJACH5BAXIAAQALAAAAAABAAEAAAMCSAkAOw==); }
+
+/* Pretty shapes */
+#urlbar > hbox > hbox,
+#nav-bar #PanelUI-menu-button,
+#nav-bar-customization-target .chromeclass-toolbar-additional {
+  background: #232323;
+  border-radius: 5px !important;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.5) !important;
+}
+
+/* Positioning hax galore */
+#nav-bar {
+  margin: -1px 0 1px;
+  box-sizing: content-box;
+  border-bottom: 3px double #fc615b !important;
+  padding: 3px 7px 3px;
+}
+
+#urlbar > hbox > dropmarker {
+  margin: 0 5px 0 1px;
+}
+
+#urlbar-wrapper { padding-bottom: 2px; }
+
+#urlbar > hbox > hbox {
+  padding-left: 5px;
+  margin-right: 0;
+}
+
+#back-button, #forward-button { width: 28px; }
+#forward-button { padding-top: 3px !important; }
+
+/* DON'T EVEN ASK I'M GONNA CRY */
+#forward-button:not([disabled]) {
+  margin-left : calc(2px + var(--backbutton-urlbar-overlap)) !important;
+}
+#back-button[disabled] + #urlbar-wrapper > #forward-button:not([disabled]) {
+  margin-left: calc(var(--forwardbutton-width) - var(--backbutton-urlbar-overlap)) !important;
+}
+#back-button[disabled] {
+  margin-left: calc(-0.01px - var(--forwardbutton-width) - var(--backbutton-urlbar-overlap));
+}
+
+#urlbar {
+  margin-left: 15px !important;
+}
+#back-button:not([disabled]) + #urlbar-wrapper > #forward-button[disabled] + #urlbar {
+  margin-left: 30px !important;
+}
+#back-button[disabled] + #urlbar-wrapper > #forward-button[disabled] + #urlbar {
+  margin-left: calc(var(--forwardbutton-width) - 3px) !important;
+}
+
+#back-button:not([disabled]),
+#back-button:not([disabled]) + #urlbar-wrapper > #forward-button[disabled] + #urlbar {
+  transition: margin-left 0.15s ease-out;
+}
