@@ -3,9 +3,9 @@ Stylish theme for Firefox
 
 A Firefox theme for use with [Stylish](https://addons.mozilla.org/en-US/firefox/addon/stylish/) and [Tab Center](https://testpilot.firefox.com/experiments/tab-center).
 
-![Collapsed Tab Bar](/screen/collapsed.png)
-![Expanded Tab Bar](/screen/expanded.png)
-![Pinned Tab Bar](/screen/pinned.png)
+![Collapsed Tab Bar](/screen/collapsed.PNG)
+![Expanded Tab Bar](/screen/expanded.PNG)
+![Pinned Tab Bar](/screen/pinned.PNG)
 
 Designed to fit in with [neiio's Void Windows theme](http://neiio.deviantart.com/art/Void-Windows-10-Edition-569696624), with some extra flair.
 
@@ -20,4 +20,4 @@ Fonts used in screenshots:
 * [Rainyhearts](http://www.dafont.com/rainyhearts.font)
 * [7x12serif](http://www.dafont.com/7-12-serif.font) or any other pixel font that can render "«»"
 
-Images used in screenshots can be found under the [img/](/img/) directory of this repository. Default behavior is [starer](/img/starer.gif) as default, [blinker](/img/blinker.gif) for hovering, and [chomper](/img/chomper.gif) for clicking.
+Images used in screenshots can be found under the [img/](/img/) directory of this repository. Default behavior is ![starer](/img/starer.gif) as default, ![blinker](/img/blinker.gif) for hovering, and ![chomper](/img/chomper.gif) for clicking.
