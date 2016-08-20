@@ -20,4 +20,7 @@ Fonts used in screenshots:
 * [Rainyhearts](http://www.dafont.com/rainyhearts.font)
 * [7x12serif](http://www.dafont.com/7-12-serif.font) or any other pixel font that can render "«»"
 
-Images used in screenshots can be found under the [img/](/img/) directory of this repository. Default behavior is ![starer](/img/starer.gif) as default, ![blinker](/img/blinker.gif) for hovering, and ![chomper](/img/chomper.gif) for clicking.
+The menu bar image used in screenshots can be found under the [img/](/img/) directory of this repository and were made by my sister. Default behavior 
+* ![starer](/img/starer.gif) default
+* ![blinker](/img/blinker.gif) hovering
+* ![chomper](/img/chomper.gif) clicking
